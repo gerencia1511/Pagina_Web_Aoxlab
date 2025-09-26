@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - Aoxlab | Únete a nuestro equipo</title>
+    <meta name="description" content="Únete al equipo de AOXLAB. Buscamos talentos apasionados por la ciencia y la calidad analítica. Envía tu hoja de vida y forma parte de nuestro laboratorio">
+    
+    <!-- Enlaces comunes -->
+    <link href="https://fonts.cdnfonts.com/css/aller" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./Css/inicio.css">
+    <link rel="stylesheet" href="./Css/Trabajo.css">
+</head>
+<body>
+    <!-- Header idéntico al inicio -->
+        <header class="main-header" id="header">
+    <div class="container">
+        <div class="header-content">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a href="./index.html" aria-label="AOXLAB - Ir a inicio">
+            <img
+                id="logo"
+                src="./img/Icon_Aoxlab/Logo Aoxlab.jpg"
+                data-logo-light="./img/Icon_Aoxlab/Logo Aoxlab.jpg"
+                data-logo-dark="./img/Icon_Aoxlab/LOGO BLANCO (1).png"
+                alt="AOXLAB Logo"
+                width="180"
+                height="60"
+            >
+            </a>
+        </div>
+
+        <!-- Navegación Principal -->
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul class="nav-list">
+
+            <li><a href="./index.html" class="nav-link active">INICIO</a></li>
+            <li><a href="./Somos.html" class="nav-link">SOMOS</a></li>
+
+            <!-- SERVICIOS - Escritorio -->
+            <li class="nav-item-dropdown desktop-only">
+                <a href="./Servicios.html" class="nav-link dropdown-trigger">
+                SERVICIOS <i class="fas fa-chevron-down dropdown-icon"></i>
+                </a>
+                <div class="dropdown-menu services-dropdown">
+                <div class="dropdown-container">
+
+                    <!-- Laboratorio con submenu -->
+                    <div class="dropdown-item has-submenu highlighted-item">
+                    <a href="./Servicios.html#laboratorio" class="dropdown-link">
+                        <i class="fas fa-microscope"></i>
+                        <div class="dropdown-content">
+                        <span class="dropdown-title">Laboratorio</span>
+                        </div>
+                        <i class="fas fa-chevron-right submenu-icon"></i>
+                    </a>
+
+                    <div class="submenu-dropdown compact-submenu">
+                        <div class="submenu-header">
+                        <h4>Servicios de Laboratorio</h4>
+                        <p>Análisis especializados con tecnología de punta</p>
+                        </div>
+
+                        <div class="submenu-grid two-column-layout">
+                        <div class="submenu-column left-column">
+                            <a href="./Servicios.html#microbiologicos" class="submenu-item compact">
+                            <i class="fas fa-bacteria"></i>
+                            <div class="submenu-content"><h5>Microbiológicos</h5></div>
+                            </a>
+                            <a href="./Servicios.html#fisicoquimicos" class="submenu-item compact">
+                            <i class="fas fa-flask"></i>
+                            <div class="submenu-content"><h5>Fisicoquímicos</h5></div>
+                            </a>
+                            <a href="./Servicios.html#nutricionales" class="submenu-item compact">
+                            <i class="fas fa-apple-alt"></i>
+                            <div class="submenu-content"><h5>Nutricionales</h5></div>
+                            </a>
+                            <a href="./Servicios.html#alergenos" class="submenu-item compact">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="submenu-content"><h5>Alérgenos</h5></div>
+                            </a>
+                            <a href="./Servicios.html#micotoxinas" class="submenu-item compact">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="submenu-content"><h5>Micotoxinas</h5></div>
+                            </a>
+                            <a href="./Servicios.html#plaguicidas" class="submenu-item compact">
+                            <i class="fas fa-seedling"></i>
+                            <div class="submenu-content"><h5>Residualidad (LMRs)</h5></div>
+                            </a>
+                        </div>
+                        <div class="submenu-column right-column">
+                            <a href="./Servicios.html#Metales" class="submenu-item compact">
+                            <i class="fas fa-atom"></i>
+                            <div class="submenu-content"><h5>Metales Pesados</h5></div>
+                            </a>
+                            <a href="./Servicios.html#Contaminantes" class="submenu-item compact">
+                            <i class="fas fa-biohazard"></i>
+                            <div class="submenu-content"><h5>Contaminantes</h5></div>
+                            </a>
+                            <a href="./Servicios.html#terpenos" class="submenu-item compact">
+                            <i class="fas fa-cannabis"></i>
+                            <div class="submenu-content"><h5>Cannabinoides y Terpenos</h5></div>
+                            </a>
+                            <a href="./Servicios.html#vidautil" class="submenu-item compact">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="submenu-content"><h5>Vida Útil y Estabilidad</h5></div>
+                            </a>
+                            <a href="./Servicios.html#biodegradabilidad" class="submenu-item compact">
+                            <i class="fas fa-leaf"></i>
+                            <div class="submenu-content"><h5>Biodegradabilidad</h5></div>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Otros destacados -->
+                    <div class="dropdown-item highlighted-item">
+                    <a href="./Certifcaciones.html" class="dropdown-link">
+                        <i class="fas fa-certificate"></i>
+                        <div class="dropdown-content"><span class="dropdown-title">Certificación de Producto</span></div>
+                    </a>
+                    </div>
+
+                    <div class="dropdown-item highlighted-item">
+                    <a href="./Capacitacion.html" class="dropdown-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="dropdown-content"><span class="dropdown-title">Capacitación</span></div>
+                    </a>
+                    </div>
+
+                    <div class="dropdown-item highlighted-item">
+                    <a href="./investigacion.html" class="dropdown-link">
+                        <i class="fas fa-lightbulb"></i>
+                        <div class="dropdown-content"><span class="dropdown-title">Investigación y Desarrollo</span></div>
+                    </a>
+                    </div>
+
+                </div>
+                </div>
+            </li>
+
+            <!-- SERVICIOS - Mobile -->
+            <li class="mobile-only"><a href="./Servicios.html" class="nav-link">Servicios</a></li>
+            <li class="mobile-only sub-item"><a href="./Capacitacion.html" class="nav-link">Capacitación</a></li>
+            <li class="mobile-only sub-item"><a href="./investigacion.html" class="nav-link">Investigación y Desarrollo</a></li>
+
+            <!-- Otros links -->
+            <li><a href="./Certifcaciones.html" class="nav-link">CERTIFICACIÓN</a></li>
+            <li><a href="./Trabajo.html" class="nav-link active">TRABAJA CON NOSOTROS</a></li>
+            <a href="./cliente.html" class="header-cta-btn portal-btn">
+            <i class="fas fa-user-circle"></i>Portal Clientes
+            </a>
+            <a href="./Contacto.html" class="header-cta-btn contact-btn">
+            <i class="fas fa-envelope"></i>Contáctanos
+            </a>
+
+            </ul>
+        </nav>
+
+        <!-- Acciones del Header -->
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Cambiar modo claro/oscuro">
+            <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="language-selector">
+            <button id="language-btn" class="lang-btn" aria-expanded="false">
+                <span class="flag-icon">🇪🇸</span> ES <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul class="language-options">
+                <li><a href="./index.html"><span class="flag-icon">🇪🇸</span> Español</a></li>
+                <li><a href="./Inglish/home.html"><span class="flag-icon">🇺🇸</span> Inglés</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <button class="mobile-menu-toggle" aria-controls="main-nav" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        </div>
+    </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="trabaja-main">
+        <!-- Sección Hero -->
+        <section class="hero-section trabajo-hero">
+            <div class="hero-carousel">
+                <div class="carousel-slide active">
+                    <img src="img/trabaja_img/Pestaña trabaja con nosotros.webp" alt="Únete al equipo AOXLAB" loading="eager">
+                    <div class="slide-content trabajo-slide-content">
+                        <h1>Trabaja con nosotros</h1>
+                        <p>Forma parte del futuro de los análisis de laboratorio</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-overlay trabajo-overlay">
+                <div class="container">
+                    <div class="hero-badge">
+                        <span><i class="fas fa-users"></i> Únete a nuestro equipo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Vacantes -->
+        <section class="vacantes-section" id="vacantes">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Oportunidades Laborales</h2>
+                    <p>Descubre las posiciones disponibles en nuestro equipo científico y administrativo</p>
+                </div>
+
+                <div class="vacantes-grid">
+                    <!-- Vacante 1: Analista de Laboratorio -->
+                    <article class="vacante-card" data-aos="fade-up">
+                        <div class="vacante-header">
+                            <h3>Analista de Laboratorio</h3>
+                            <div class="vacante-meta">
+                                <span class="badge full-time">Tiempo Completo</span>
+                                <span class="badge fixed-term">Término Fijo/Indefinido</span>
+                                <span class="ubicacion"><i class="fas fa-map-marker-alt"></i> Medellín - Presencial</span>
+                            </div>
+                        </div>
+                        <div class="vacante-body">
+                            <div class="vacante-detalle">
+                                <h4>Horario:</h4>
+                                <p class="horario-info">
+                                    <i class="fas fa-clock"></i> 
+                                    Lunes a viernes (1 sábado del mes)
+                                </p>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Requisitos:</h4>
+                                <ul class="lista-requisitos">
+                                    <li>Profesional o tecnólogo en Química, Ingeniería Química, Química Farmacéutica o afines</li>
+                                    <li>Mínimo 1 año de experiencia en análisis fisicoquímico</li>
+                                    <li>Manejo de equipos de laboratorio y formación en calidad (ISO/IEC 17025:2017)</li>
+                                    <li>Atención al detalle, organización y cumplimiento de plazos</li>
+                                </ul>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Beneficios:</h4>
+                                <ul class="lista-beneficios">
+                                    <li><i class="fas fa-dollar-sign"></i> Salario competitivo</li>
+                                    <li><i class="fas fa-graduation-cap"></i> Oportunidades de formación y desarrollo profesional</li>
+                                    <li><i class="fas fa-users"></i> Ambiente laboral dinámico y colaborativo</li>
+                                    <li><i class="fas fa-heart"></i> Plan de bienestar y reconocimientos internos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vacante-footer">
+                            <button class="btn-aplicar" href="#formulario" data-vacante="analista-laboratorio">
+                                <i class="fas fa-file-upload"></i> Aplicar ahora
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Vacante 2: Analista Instrumental GC-MS -->
+                    <article class="vacante-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="vacante-header">
+                            <h3>Analista Instrumental – Cromatografía de Gases Masas (GC-MS)</h3>
+                            <div class="vacante-meta">
+                                <span class="badge full-time">Tiempo Completo</span>
+                                <span class="badge fixed-term">Término Fijo/Indefinido</span>
+                                <span class="ubicacion"><i class="fas fa-map-marker-alt"></i> Medellín - Presencial</span>
+                            </div>
+                        </div>
+                        <div class="vacante-body">
+                            <div class="vacante-detalle">
+                                <h4>Horario:</h4>
+                                <p class="horario-info">
+                                    <i class="fas fa-clock"></i> 
+                                    Lunes a viernes (1 sábado del mes)
+                                </p>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Requisitos:</h4>
+                                <ul class="lista-requisitos">
+                                    <li>Profesional en Química, Química Farmacéutica o carreras afines</li>
+                                    <li>Experiencia mínima de 2 años en análisis instrumental, especialmente en GC-MS</li>
+                                    <li>Conocimientos en validación de métodos, interpretación de espectros y manejo de equipos Shimadzu y/o similares</li>
+                                    <li>Deseable experiencia en análisis de residuos de plaguicidas o compuestos orgánicos volátiles</li>
+                                    <li>Capacidad de análisis, organización y documentación rigurosa</li>
+                                </ul>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Beneficios:</h4>
+                                <ul class="lista-beneficios">
+                                    <li><i class="fas fa-dollar-sign"></i> Salario competitivo acorde a la experiencia</li>
+                                    <li><i class="fas fa-microscope"></i> Acceso a formación técnica y desarrollo en tecnologías de punta</li>
+                                    <li><i class="fas fa-shield-alt"></i> Estabilidad laboral en un equipo innovador y multidisciplinario</li>
+                                    <li><i class="fas fa-heart"></i> Plan de bienestar y actividades internas de reconocimiento</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vacante-footer">
+                            <button class="btn-aplicar" data-vacante="analista-instrumental-gcms">
+                                <i class="fas fa-file-upload"></i> Aplicar ahora
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Vacante 3: Tomador(a) de Muestras -->
+                    <article class="vacante-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="vacante-header">
+                            <h3>Tomador(a) de Muestras con Moto Propia</h3>
+                            <div class="vacante-meta">
+                                <span class="badge full-time">Tiempo Completo</span>
+                                <span class="badge field-work">Trabajo en Campo</span>
+                                <span class="ubicacion"><i class="fas fa-map-marker-alt"></i> Medellín - Campo y Sede</span>
+                            </div>
+                        </div>
+                        <div class="vacante-body">
+                            <div class="vacante-detalle">
+                                <h4>Horario:</h4>
+                                <p class="horario-info">
+                                    <i class="fas fa-clock"></i> 
+                                    Lunes a viernes (1 sábado del mes)
+                                </p>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Requisitos:</h4>
+                                <ul class="lista-requisitos">
+                                    <li>Técnico o tecnólogo en áreas como Química, Ambiental, Alimentos o afines</li>
+                                    <li>Experiencia mínima de 6 meses en toma de muestras (aguas, alimentos, superficies u otros)</li>
+                                    <li>Moto propia con documentación al día y licencia de conducción vigente</li>
+                                    <li>Conocimiento básico en normas de bioseguridad y cadena de custodia</li>
+                                    <li>Excelente actitud de servicio, puntualidad y organización</li>
+                                </ul>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Beneficios:</h4>
+                                <ul class="lista-beneficios">
+                                    <li><i class="fas fa-motorcycle"></i> Auxilio por uso de moto y combustible</li>
+                                    <li><i class="fas fa-dollar-sign"></i> Salario competitivo y prestaciones de ley</li>
+                                    <li><i class="fas fa-book"></i> Capacitación continua en protocolos de muestreo</li>
+                                    <li><i class="fas fa-handshake"></i> Buen ambiente laboral y estabilidad</li>
+                                    <li><i class="fas fa-heart"></i> Plan de bienestar y actividades internas de reconocimiento</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vacante-footer">
+                            <button class="btn-aplicar" data-vacante="tomador-muestras">
+                                <i class="fas fa-file-upload"></i> Aplicar ahora
+                            </button>
+                        </div>
+                    </article>
+                
+
+                <article class="vacante-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="vacante-header">
+                            <h3>Aprendiz SENA</h3>
+                            <div class="vacante-meta">
+                                <span class="badge full-time">Tiempo Completo</span>
+                                <span class="badge fixed-term">Contrato Aprendizaje</span>
+                                <span class="ubicacion"><i class="fas fa-map-marker-alt"></i> Medellín -
+                                    Presencial</span>
+                            </div>
+                        </div>
+                        <div class="vacante-body">
+                            <div class="vacante-detalle">
+                                <h4>Horario</h4>
+                                <p class="horario-info"><i class="fas fa-clock"></i> Lunes a viernes (1 sábado al mes)
+                                </p>
+                                <p>Para inicio en OCTUBRE de 2025 etapa productiva.</p>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Requisitos</h4>
+                                <ul class="lista-requisitos">
+                                    <li>Estudiante activo del SENA en programas como Tecnología en Química Industrial,
+                                        Técnico en Muestras Químicas o carreras afines.</li>
+                                    <li>Interés en procesos de homogeneización y manejo de muestras.</li>
+                                    <li>Responsabilidad, orden y cumplimiento de protocolos de seguridad y bioseguridad.
+                                    </li>
+                                    <li>Habilidad para el trabajo en equipo y disposición de aprendizaje.</li>
+                                </ul>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Responsabilidades</h4>
+                                <ul class="lista-beneficios">
+                                    <li><i class="fas fa-tasks"></i> Apoyo en la recepción, registro y almacenamiento de
+                                        muestras según protocolos internos.</li>
+                                    <li><i class="fas fa-cogs"></i> Ejecución de tareas de homogeneización de muestras
+                                        bajo la supervisión de personal técnico.</li>
+                                    <li><i class="fas fa-check-circle"></i> Cumplimiento de procedimientos de calidad
+                                        relacionados con conservación y trazabilidad de muestras.</li>
+                                    <li><i class="fas fa-boxes"></i> Colaboración en labores de organización, rotulación
+                                        y control de inventarios.</li>
+                                </ul>
+                            </div>
+                            <div class="vacante-detalle">
+                                <h4>Beneficios</h4>
+                                <ul class="lista-beneficios">
+                                    <li><i class="fas fa-dollar-sign"></i> 1 SMLV con prestaciones de ley</li>
+                                    <li><i class="fas fa-award"></i> Formación práctica en un laboratorio acreditado en
+                                        ISO/IEC 17025:2017.</li>
+                                    <li><i class="fas fa-users"></i> Acompañamiento y mentoría de profesionales en el
+                                        área.</li>
+                                    <li><i class="fas fa-chart-line"></i> Desarrollo de competencias en procesos clave de
+                                        calidad y manejo de muestras.</li>
+                                    <li><i class="fas fa-handshake"></i> Oportunidad de vinculación según desempeño.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="vacante-footer">
+                            <button class="btn-aplicar" data-vacante="aprendiz-sena">
+                                <i class="fas fa-file-upload"></i> Aplicar ahora
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección de Proceso -->
+        <section class="proceso-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nuestro Proceso de Selección</h2>
+                    <p>Conoce las etapas para unirte a nuestro equipo científico</p>
+                </div>
+
+                <div class="proceso-steps">
+                    <div class="step-card" data-aos="fade-up">
+                        <div class="step-icon">
+                            <i class="fas fa-file-alt"></i>
+                            <div class="step-number">1</div>
+                        </div>
+                        <h3>Envío de Documentos</h3>
+                        <p>Completa el formulario y adjunta tu CV y documentos soporte</p>
+                    </div>
+
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                            <div class="step-number">2</div>
+                        </div>
+                        <h3>Revisión de Perfil</h3>
+                        <p>Nuestro equipo de talento humano evaluará tu aplicación</p>
+                    </div>
+
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                            <div class="step-number">3</div>
+                        </div>
+                        <h3>Entrevista Técnica y psicotécnica</h3>
+                        <p>Conversación con nuestro equipo científico y de calidad</p>
+                    </div>
+
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-icon">
+                            <i class="fas fa-handshake"></i>
+                            <div class="step-number">4</div>
+                        </div>
+                        <h3>Inducción</h3>
+                        <p>Programa de onboarding y bienvenida al equipo Aoxlab</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de Aplicación Actualizado -->
+<!-- Formulario de Aplicación Actualizado -->
+<section class="formulario-section scroll-offset-adjustment" id="formulario">
+    <div class="container">
+        <div class="form-container" data-aos="fade-up">
+            <h2>Envía tu Hoja de Vida</h2>
+
+            <!-- Instrucciones para CV -->
+            <div class="cv-instructions">
+                <div class="instruction-card">
+                    <i class="fas fa-info-circle"></i>
+                    <div class="instruction-content">
+                        <h4>📧 Instrucciones para envío de CV</h4>
+                        <p><strong>Después de completar este formulario:</strong></p>
+                        <p>1. Envía tu CV en formato PDF (máximo 5MB) al correo: <strong>gerencia@aoxlab.com</strong></p>
+                        <p>2. <strong>Asunto requerido:</strong> "CV - [Tu Nombre] - [Vacante]"</p>
+                        <p>3. <strong>Ejemplo:</strong> CV - María García - Analista Laboratorio</p>
+                    </div>
+                </div>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" id="formTrabajo" class="form-aplicacion">
+                <!-- Clave de acceso Web3Forms -->
+                <input type="hidden" name="access_key" value="078cfeb4-6846-46da-b5f0-8d945e0d5b60">
+                
+                <!-- Configuraciones en español -->
+                <input type="hidden" name="subject" value="Nueva Aplicación Laboral - AOXLAB">
+                <input type="hidden" name="from_name" value="Portal de Empleo AOXLAB">
+                
+                <div class="input-duo">
+                    <div class="input-group">
+                        <label for="nombre"><i class="fas fa-user"></i> Nombre Completo</label>
+                        <input type="text" 
+                            id="nombre" 
+                            name="Nombre_Completo" 
+                            required 
+                            data-min-length="2"
+                            data-normalize-spaces="true"
+                            placeholder="Ingrese su nombre completo">
+                    </div>
+                    <div class="input-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                        <input type="email" 
+                            id="email" 
+                            name="Correo_Electronico" 
+                            required
+                            placeholder="ejemplo@correo.com">
+                    </div>
+                </div>
+
+                <div class="input-duo">
+                    <div class="input-group">
+                        <label for="telefono"><i class="fas fa-phone"></i> Teléfono de Contacto</label>
+                        <input type="tel" 
+                            id="telefono" 
+                            name="Telefono_Contacto" 
+                            required
+                            data-min-length="7"
+                            placeholder="+57 310 123 4567">
+                    </div>
+                    <div class="input-group">
+                        <label for="vacante"><i class="fas fa-briefcase"></i> Vacante a la que aplica</label>
+                        <select id="vacante" name="Vacante_Seleccionada" required>
+                            <option value="">Seleccione una vacante</option>
+                            <option value="aprendiz-sena">Aprendiz SENA</option>
+                            <option value="analista-laboratorio">Analista de Laboratorio – Fisicoquímico</option>
+                            <option value="analistaMicrobiologia">Analista de Laboratorio – Microbiología</option>
+                            <option value="analista-instrumental">Analista Instrumental (HPLC, GC-MS, ICP-OES)</option>
+                            <option value="asesor-comercial">Asesor(a) Comercial</option>
+                            <option value="auditor-interno">Auditor Interno</option>
+                            <option value="auxiliar-administrativo">Auxiliar Administrativo</option>
+                            <option value="auxiliar-contable">Auxiliar Contable</option>
+                            <option value="direccion-calidad">Dirección de Calidad</option>
+                            <option value="direccion-tecnica">Dirección Técnica</option>
+                            <option value="direccion-validaciones">Dirección de validaciones</option>
+                            <option value="jefe-laboratorio">Jefe de Laboratorio</option>
+                            <option value="lider-investigacion">Líder de investigación</option>
+                            <option value="lider-mantenimiento">Líder de Mantenimiento y metrología</option>
+                            <option value="tomador-muestras">Tomador(a) de Muestras</option>
+                            <option value="vendedor">Vendedor(a)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="cv-confirmacion"><i class="fas fa-file-pdf"></i> Confirmación de envío de CV</label>
+                    <select id="cv-confirmacion" name="Confirmacion_Envio_CV" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Si, enviaré mi CV a gerencia@aoxlab.com">Sí, enviaré mi CV a gerencia@aoxlab.com</option>
+                        <option value="Ya envié mi CV anteriormente">Ya envié mi CV anteriormente</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="experiencia"><i class="fas fa-briefcase"></i> Años de experiencia en el área</label>
+                    <select id="experiencia" name="Años_Experiencia">
+                        <option value="">Seleccione años de experiencia</option>
+                        <option value="0-1">0-1 años</option>
+                        <option value="2-3">2-3 años</option>
+                        <option value="4-5">4-5 años</option>
+                        <option value="6-10">6-10 años</option>
+                        <option value="10+">Más de 10 años</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="habilidades"><i class="fas fa-tools"></i> Habilidades principales (separadas por comas)</label>
+                    <input type="text" 
+                        id="habilidades" 
+                        name="Habilidades_Clave" 
+                        data-normalize-spaces="true"
+                        placeholder="Ej: GC-MS, HPLC, análisis fisicoquímico, microbiología...">
+                </div>
+
+                <div class="input-group">
+                    <label for="mensaje"><i class="fas fa-comment"></i> Experiencia Relevante / Comentarios Adicionales</label>
+                    <textarea id="mensaje" 
+                            name="Experiencia_y_Comentarios" 
+                            rows="5" 
+                            data-min-length="10"
+                            data-normalize-spaces="true"
+                            placeholder="Describa brevemente su experiencia relevante para la posición..."></textarea>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="cta-btn primary">
+                        <i class="fas fa-paper-plane"></i> Enviar Aplicación
+                    </button>
+                    <p class="disclaimer">
+                        Al enviar, aceptas nuestro <a href="politicas.html">tratamiento de datos</a>. 
+                        <strong>🔴 IMPORTANTE: Recuerda enviar tu CV a gerencia@aoxlab.com</strong>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section company-info">
+                    <img src="./img/Icon_Aoxlab/LOGO BLANCO (1).png" alt="AOXLAB Logo" class="footer-logo">
+                    <p>Más que un laboratorio: un aliado en tu camino hacia la calidad.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/aoxlab_sas/?hl=es-la"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://co.linkedin.com/company/aoxlab"target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sección de Contacto Principal - Medellín -->
+                <div class="footer-section contact-main"><!--Números de contacto actualizados hasta 2025/06/12-->
+                    <h4>Sede Principal - Medellín</h4>
+                    <div class="contact-info-main">
+                        <p><i class="fas fa-map-marker-alt"></i> Calle 32F #74B-122, Laureles<br>Medellín, Antioquia</p>
+                        <p><i class="fas fa-phone"></i> (604) 604-7454</p>
+                        <p><i class="fas fa-mobile-alt"></i> +57 310 874 3291</p>
+                        <p><i class="fas fa-mobile-alt"></i> +57 310 833 8768</p>
+                        <p><i class="fas fa-envelope"></i> direccioncomercial@aoxlab.com</p>
+                    </div>
+                </div>
+
+                <!-- Sección de Otras Ciudades -->
+                <div class="footer-section contact-cities">
+                    <h4>Otras Ciudades</h4>
+                    <div class="cities-grid">
+                        <div class="city-contact">
+                            <div class="city-header">
+                                <i class="fas fa-map-pin"></i>
+                                <span class="city-name">Bogotá</span>
+                            </div>
+                            <p class="city-phone">
+                                <i class="fas fa-mobile-alt"></i> +57 310 383 0543
+                            </p>
+                        </div>
+
+                        <div class="city-contact">
+                            <div class="city-header">
+                                <i class="fas fa-map-pin"></i>
+                                <span class="city-name">Cali</span>
+                            </div>
+                            <p class="city-phone">
+                                <i class="fas fa-mobile-alt"></i> +57 310 206 5380
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="Somos.html">Somos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="Certifcaciones.html">Certificaciones</a></li>
+                        <li><a href="portal-clientes.html">Portal Clientes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li><a href="Contacto.html">PQRS</a></li>
+                        <li><a href="https://www.google.com/maps/d/u/0/edit?mid=1qGKuC6dyM3Hl5wamHOxGQbNzX_Ls47w&usp=sharing" target="_blank">Mapa del sitio</a></li>
+                        <li><a href="politicas.html">Tratamiento de datos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aoxlab S.A.S. Todos los derechos reservados. | Ágil, Eficiente y Flexible.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botones Flotantes - Idénticos al inicio -->
+    <!-- WhatsApp Flotante -->
+        <a href="#" class="whatsapp-float" 
+            id="whatsapp-float-btn"
+            aria-label="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="tooltip">¿Necesitas ayuda?</span>
+        </a>
+
+        <!-- Modal de WhatsApp -->
+    <div class="whatsapp-modal" id="whatsapp-modal">
+        <div class="whatsapp-modal-content">
+            <div class="whatsapp-header">
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>Contáctanos por WhatsApp</h3>
+                <p>Selecciona tu ciudad más cercana</p>
+                <button class="whatsapp-close" id="whatsapp-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="whatsapp-contacts">
+                <!-- Medellín - Sede Principal -->
+                <a href="https://wa.me/573108338768?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Medellín" 
+                class="whatsapp-contact" 
+                target="_blank"
+                data-city="medellin">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Medellín</h4>
+                        <span class="contact-label">Sede Principal</span>
+                        <span class="contact-number">+57 310 833 8768</span>
+                    </div>
+                    <div class="contact-arrow">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </a>
+
+                <!-- Bogotá -->
+                <a href="https://wa.me/573103830543?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Bogotá" 
+                class="whatsapp-contact" 
+                target="_blank"
+                data-city="bogota">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Bogotá</h4>
+                        <span class="contact-label">Punto de Atención</span>
+                        <span class="contact-number">+57 310 383 0543</span>
+                    </div>
+                    <div class="contact-arrow">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </a>
+
+                <!-- Cali -->
+                <a href="https://wa.me/573102065380?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Cali" 
+                class="whatsapp-contact" 
+                target="_blank"
+                data-city="cali">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Cali</h4>
+                        <span class="contact-label">Punto de Atención</span>
+                        <span class="contact-number">+57 310 206 5380</span>
+                    </div>
+                    <div class="contact-arrow">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="whatsapp-footer">
+                <p>Horario de atención: Lun - Vie 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Botón flotante del chatbot 
+    <div class="chatbot-float" id="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+        <span class="tooltip">¿Necesitas ayuda?</span>
+        <div class="notification-dot" id="chatbot-notification"></div>
+    </div>-->
+
+    <!-- Modal del chatbot -->
+    <div class="chatbot-modal" id="chatbot-modal">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chatbot-info">
+                <h3>Asistente Aoxlab</h3>
+                <span class="status online">En línea</span>
+            </div>
+            <button class="chatbot-close" id="chatbot-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chat-message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>¡Hola! Soy el asistente virtual de Aoxlab. Puedo ayudarte con el portal de clientes, acceso a resultados y soporte técnico. ¿En qué puedo asistirte?</p>
+                    <div class="quick-actions">
+                        <button class="quick-btn" data-action="portal">Ayuda con el portal</button>
+                        <button class="quick-btn" data-action="resultados">Consultar resultados</button>
+                        <button class="quick-btn" data-action="soporte">Soporte técnico</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chatbot-footer">    
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Escribe tu mensaje aquí..." maxlength="500">
+                <button id="send-message" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="Js/Inicio.js"></script>
+    <script src="Js/Trabajo.js"></script>
+</body>
+</html>

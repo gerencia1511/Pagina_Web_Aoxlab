@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Aoxlab</title>
+    <meta name="description" content="Contáctenos para solicitar análisis, certificaciones o soporte técnico. Estamos en Medellín, Colombia">
+    
+    <!-- Fuentes y estilos -->
+    <link href="https://fonts.cdnfonts.com/css/aller" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Css/inicio.css">
+    <link rel="stylesheet" href="Css/Contacto.css">
+</head>
+<body>
+    <!-- Header idéntico al inicio -->
+        <header class="main-header" id="header">
+    <div class="container">
+        <div class="header-content">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a href="./index.html" aria-label="AOXLAB - Ir a inicio">
+            <img
+                id="logo"
+                src="./img/Icon_Aoxlab/Logo Aoxlab.jpg"
+                data-logo-light="./img/Icon_Aoxlab/Logo Aoxlab.jpg"
+                data-logo-dark="./img/Icon_Aoxlab/LOGO BLANCO (1).png"
+                alt="AOXLAB Logo"
+                width="180"
+                height="60"
+            >
+            </a>
+        </div>
+
+        <!-- Navegación Principal -->
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul class="nav-list">
+
+            <li><a href="./index.html" class="nav-link">INICIO</a></li>
+            <li><a href="./Somos.html" class="nav-link">SOMOS</a></li>
+
+            <!-- SERVICIOS - Escritorio -->
+            <li class="nav-item-dropdown desktop-only">
+                <a href="./Servicios.html" class="nav-link dropdown-trigger">
+                SERVICIOS <i class="fas fa-chevron-down dropdown-icon"></i>
+                </a>
+                <div class="dropdown-menu services-dropdown">
+                <div class="dropdown-container">
+
+                    <!-- Laboratorio con submenu -->
+                    <div class="dropdown-item has-submenu highlighted-item">
+                    <a href="./Servicios.html#laboratorio" class="dropdown-link">
+                        <i class="fas fa-microscope"></i>
+                        <div class="dropdown-content">
+                        <span class="dropdown-title">Laboratorio</span>
+                        </div>
+                        <i class="fas fa-chevron-right submenu-icon"></i>
+                    </a>
+
+                    <div class="submenu-dropdown compact-submenu">
+                        <div class="submenu-header">
+                        <h4>Servicios de Laboratorio</h4>
+                        <p>Análisis especializados con tecnología de punta</p>
+                        </div>
+
+                        <div class="submenu-grid two-column-layout">
+                        <div class="submenu-column left-column">
+                            <a href="./Servicios.html#microbiologicos" class="submenu-item compact">
+                            <i class="fas fa-bacteria"></i>
+                            <div class="submenu-content"><h5>Microbiológicos</h5></div>
+                            </a>
+                            <a href="./Servicios.html#fisicoquimicos" class="submenu-item compact">
+                            <i class="fas fa-flask"></i>
+                            <div class="submenu-content"><h5>Fisicoquímicos</h5></div>
+                            </a>
+                            <a href="./Servicios.html#nutricionales" class="submenu-item compact">
+                            <i class="fas fa-apple-alt"></i>
+                            <div class="submenu-content"><h5>Nutricionales</h5></div>
+                            </a>
+                            <a href="./Servicios.html#alergenos" class="submenu-item compact">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="submenu-content"><h5>Alérgenos</h5></div>
+                            </a>
+                            <a href="./Servicios.html#micotoxinas" class="submenu-item compact">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="submenu-content"><h5>Micotoxinas</h5></div>
+                            </a>
+                            <a href="./Servicios.html#plaguicidas" class="submenu-item compact">
+                            <i class="fas fa-seedling"></i>
+                            <div class="submenu-content"><h5>Residualidad (LMRs)</h5></div>
+                            </a>
+                        </div>
+                        <div class="submenu-column right-column">
+                            <a href="./Servicios.html#Metales" class="submenu-item compact">
+                            <i class="fas fa-atom"></i>
+                            <div class="submenu-content"><h5>Metales Pesados</h5></div>
+                            </a>
+                            <a href="./Servicios.html#Contaminantes" class="submenu-item compact">
+                            <i class="fas fa-biohazard"></i>
+                            <div class="submenu-content"><h5>Contaminantes</h5></div>
+                            </a>
+                            <a href="./Servicios.html#terpenos" class="submenu-item compact">
+                            <i class="fas fa-cannabis"></i>
+                            <div class="submenu-content"><h5>Cannabinoides y Terpenos</h5></div>
+                            </a>
+                            <a href="./Servicios.html#vidautil" class="submenu-item compact">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="submenu-content"><h5>Vida Útil y Estabilidad</h5></div>
+                            </a>
+                            <a href="./Servicios.html#biodegradabilidad" class="submenu-item compact">
+                            <i class="fas fa-leaf"></i>
+                            <div class="submenu-content"><h5>Biodegradabilidad</h5></div>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Otros destacados -->
+                    <div class="dropdown-item highlighted-item">
+                    <a href="./Certifcaciones.html" class="dropdown-link">
+                        <i class="fas fa-certificate"></i>
+                        <div class="dropdown-content"><span class="dropdown-title">Certificación de Producto</span></div>
+                    </a>
+                    </div>
+
+                    <div class="dropdown-item highlighted-item">
+                    <a href="./Capacitacion.html" class="dropdown-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="dropdown-content"><span class="dropdown-title">Capacitación</span></div>
+                    </a>
+                    </div>
+
+                    <div class="dropdown-item highlighted-item">
+                    <a href="./investigacion.html" class="dropdown-link">
+                        <i class="fas fa-lightbulb"></i>
+                        <div class="dropdown-content"><span class="dropdown-title">Investigación y Desarrollo</span></div>
+                    </a>
+                    </div>
+
+                </div>
+                </div>
+            </li>
+
+            <!-- SERVICIOS - Mobile -->
+            <li class="mobile-only"><a href="./Servicios.html" class="nav-link">Servicios</a></li>
+            <li class="mobile-only sub-item"><a href="./Capacitacion.html" class="nav-link">Capacitación</a></li>
+            <li class="mobile-only sub-item"><a href="./investigacion.html" class="nav-link">Investigación y Desarrollo</a></li>
+
+            <!-- Otros links -->
+            <li><a href="./Certifcaciones.html" class="nav-link">CERTIFICACIÓN</a></li>
+            <li><a href="./Trabajo.html" class="nav-link">TRABAJA CON NOSOTROS</a></li>
+            <a href="./cliente.html" class="header-cta-btn portal-btn">
+            <i class="fas fa-user-circle"></i>Portal Clientes
+            </a>
+            <a href="./Contacto.html" class="header-cta-btn contact-btn">
+            <i class="fas fa-envelope"></i>Contáctanos
+            </a>
+
+            </ul>
+        </nav>
+
+        <!-- Acciones del Header -->
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-btn" aria-label="Cambiar modo claro/oscuro">
+            <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="language-selector">
+            <button id="language-btn" class="lang-btn" aria-expanded="false">
+                <span class="flag-icon">🇪🇸</span> ES <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul class="language-options">
+                <li><a href="./index.html"><span class="flag-icon">🇪🇸</span> Español</a></li>
+                <li><a href="./Inglish/home.html"><span class="flag-icon">🇺🇸</span> Inglés</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <button class="mobile-menu-toggle" aria-controls="main-nav" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        </div>
+    </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <!-- SECCIÓN MEJORADA CON TÍTULO Y SUBTÍTULO -->
+<section class="hero-section contacto-hero">
+    <div class="hero-carousel">
+        <div class="carousel-slide active">
+            <img src="img/contacto_img/Portal contactanos.webp" alt="Equipo de AOXLAB" loading="eager">
+        </div>
+    </div>
+
+    <!-- Overlay con contenido de texto -->
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Contáctanos</h1>
+                <p class="hero-subtitle">Comunícate con nosotros por cualquiera de nuestros medios de comunicación</p>
+                <div class="hero-actions">
+                    <a target="_blank" href="https://wa.me/573108338768?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Medellín" class="cta-btn primary">
+                        <i class="fas fa-envelope"></i> Enviar mensaje
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal del Proceso PQRSF Detallado -->
+<div class="proceso-modal" id="procesoModal">
+    <div class="proceso-modal-content">
+        <div class="proceso-modal-header">
+            <h3>Proceso Detallado de PQRSF</h3>
+            <button class="proceso-close" id="procesoClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="proceso-stepper">
+            <div class="stepper-nav">
+                <div class="step-indicator active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Recepción</span>
+                </div>
+                <div class="step-indicator" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Diligenciamiento</span>
+                </div>
+                <div class="step-indicator" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Revisión</span>
+                </div>
+                <div class="step-indicator" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-label">Requerimiento</span>
+                </div>
+                <div class="step-indicator" data-step="5">
+                    <span class="step-number">5</span>
+                    <span class="step-label">Gestión</span>
+                </div>
+                <div class="step-indicator" data-step="6">
+                    <span class="step-number">6</span>
+                    <span class="step-label">Respuesta</span>
+                </div>
+            </div>
+
+            <div class="stepper-content">
+                <!-- Paso 1 -->
+                <div class="step-content active" id="step-1">
+                    <div class="step-icon">
+                        <i class="fas fa-inbox"></i>
+                    </div>
+                    <h4>1. Recepción de la PQRSF</h4>
+                    <ul>
+                        <li>Se recibe por correo electrónico, teléfono, presencial o página web</li>
+                        <li>Se verifica si fue enviada por medios digitales</li>
+                        <li>Se procede a revisar el formato y diligenciamiento</li>
+                    </ul>
+                    <div class="step-time">
+                        <i class="fas fa-clock"></i>
+                        <span>Tiempo estimado: Inmediato</span>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="step-content" id="step-2">
+                    <div class="step-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h4>2. Diligenciamiento del Formato</h4>
+                    <ul>
+                        <li>Se revisa que toda la información esté completa</li>
+                        <li>Se verifica la veracidad de los datos proporcionados</li>
+                        <li>Si falta información, se procede al paso de requerimiento</li>
+                    </ul>
+                    <div class="step-time">
+                        <i class="fas fa-clock"></i>
+                        <span>Tiempo estimado: 1-2 días hábiles</span>
+                    </div>
+                </div>
+
+                <!-- Continúa con los demás pasos... -->
+            </div>
+        </div>
+        
+        <div class="proceso-modal-footer">
+            <button class="nav-btn" id="prevStep" disabled>
+                <i class="fas fa-chevron-left"></i> Anterior
+            </button>
+            <button class="nav-btn" id="nextStep">
+                Siguiente <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+        <!-- Sección de Contacto -->
+        <section class="seccion-contacto">
+            <div class="container">
+                <div class="contacto-grid">
+                    <!-- Formulario -->
+                    <div class="formulario-contacto">
+                        <h2>Envíanos tu consulta</h2>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="form-contacto" id="contactForm">
+
+                            <input type="hidden" name="access_key" value="53d270db-c22d-4502-97ad-c1bafe8ee62b">
+                            <!-- Configuraciones adicionales -->
+                            <input type="hidden" name="subject" value="Nueva consulta desde AOXLAB">
+                            <input type="hidden" name="from_name" value="Formulario AOXLAB">
+                            <div class="input-group">
+                                <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                                <input type="text" id="nombre" name="name" required>
+                            </div>
+
+                            <div class="input-duo">
+                                <div class="input-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                                    <input type="email" id="email" name="Correo electrónico" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="telefono"><i class="fas fa-phone"></i> Teléfono</label>
+                                    <input type="tel" id="telefono" name="Teléfono">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="asunto"><i class="fas fa-tag"></i> Asunto</label>
+                                <select id="asunto" name="subject_type" required>
+                                    <option value="PQRSF">PQRSF</option>
+                                    <option value="Cotización de servicio">Cotización de servicio</option>
+                                    <option value="Soporte técnico">Soporte técnico</option>
+                                    <option value="Certificaciones">Certificaciones</option>
+                                    <option value="Sugerencia">Sugerencia</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="mensaje"><i class="fas fa-comment"></i> Describa su solicitud</label>
+                                <textarea id="mensaje" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="cta-btn primary">
+                                <i class="fas fa-paper-plane"></i> Enviar mensaje
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Información de contacto -->
+                    <div class="info-contacto">
+                        <div class="tarjeta-contacto">
+                            <h3>Información de contacto</h3>
+                            <div class="detalle-contacto">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Sede principal – Medellín</h4>
+                                    <p>Calle 32F #74B-122, Laureles<br>Medellín, Antioquia</p>
+                                </div>
+                            </div>
+                            <div class="detalle-contacto">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Teléfono fijo</h4>
+                                    <p><a href="tel:+576047454">(604) 604-7454</a></p>
+                                </div>
+                            </div>
+                            <div class="detalle-contacto">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>Celular 1</h4>
+                                    <p><a href="tel:+573108743291">+57 310 874 3291</a></p>
+                                </div>
+                            </div>
+                            <div class="detalle-contacto">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>Celular 2</h4>
+                                    <p><a href="tel:+573108338768">+57 310 833 8768</a></p>
+                                </div>
+                            </div>
+                            <div class="detalle-contacto">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Correo electrónico</h4>
+                                    <p><a href="mailto:direccioncomercial@aoxlab.com">direccioncomercial@aoxlab.com</a></p>
+                                </div>
+                            </div>
+                            <div class="horario-atencion">
+                                <h4>Horario de atención</h4>
+                                <p>Lunes a Viernes: 7:30 AM – 5:30 PM <br><br> Sábado: 8:00 AM – 12:00 PM</p>
+                            </div>
+                            <h3>Otras ciudades</h3>
+                            <div class="detalle-contacto">
+                                <i class="fas fa-map-pin"></i>
+                                <div>
+                                    <h4>Bogotá</h4>
+                                    <p><a href="tel:+573103830543">+57 310 383 0543</a></p>
+                                </div>
+                            </div>
+                            <div class="detalle-contacto">
+                                <i class="fas fa-map-pin"></i>
+                                <div>
+                                    <h4>Cali</h4>
+                                    <p><a href="tel:+573102065380">+57 310 206 5380</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- NUEVA SECCIÓN: Mapa horizontal debajo de todo -->
+        <div class="mapa-horizontal-section">
+            <div class="container">
+                <div class="mapa-header">
+                    <h3><i class="fas fa-map-marker-alt"></i> Nuestra Ubicación</h3>
+                    <p>Visítanos en nuestra sede principal en Laureles, Medellín</p>
+                </div>
+
+                <div class="mapa-container-horizontal">
+                    <div class="mapa-info-overlay">
+                        <div class="mapa-info-card">
+                            <h4><i class="fas fa-building"></i> AOXLAB SAS</h4>
+                            <p><strong>Dirección:</strong> Calle 32F #74B-122, Laureles</p>
+                            <p><strong>Barrio:</strong> Laureles, Medellín</p>
+                            <p><strong>Teléfono:</strong> (604) 604-7454</p>
+                            <div class="mapa-actions">
+
+                                <a href="https://wa.me/573108338768?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Medellín" class="btn-llamar" target="_blank">
+                                    <i class="fas fa-phone"></i> Llamar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mapa-iframe-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.196901844696!2d-75.57876338459322!3d6.248386395466444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429e2e6c2d1b7%3A0x7d2b0e8b2f1c8e7!2sCalle%2032F%20%2374B-122%2C%20Laureles%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1678888888888!5m2!1ses!2sco"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de AOXLAB SAS en Laureles, Medellín"
+                            class="mapa-iframe-horizontal">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Nueva Sección del Proceso PQRSF -->
+<section class="proceso-pqrsf-section">
+    <div class="container">
+        <div class="proceso-header text-center">
+            <h2>Proceso de PQRSF</h2>
+            <p class="proceso-subtitle">Conoce paso a paso cómo gestionamos tus Peticiones, Quejas, Reclamos, Sugerencias y Felicitaciones</p>
+            <div class="proceso-actions">
+                <a href="./img/PQRS/ANEXO1.-Descripcion-del-proceso-de-quejas-scaled.jpeg" target="_blank" class="cta-btn outline" id="descargar-pdf-btn">
+                    <i class="fas fa-download"></i> Ver proceso completo
+                </a>
+            </div>
+        </div>
+
+        <!-- Resumen Visual del Proceso -->
+        <div class="proceso-resumen">
+            <div class="timeline-container">
+                <div class="timeline-item" data-step="1">
+                    <div class="timeline-icon">
+                        <i class="fas fa-inbox"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Recepción</h4>
+                        <p>Recibimos tu PQRSF por cualquier canal disponible</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="2">
+                    <div class="timeline-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Validación</h4>
+                        <p>Verificamos que la información esté completa</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="3">
+                    <div class="timeline-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Proceso</h4>
+                        <p>Analizamos y gestionamos tu solicitud</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-step="4">
+                    <div class="timeline-icon">
+                        <i class="fas fa-reply"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Respuesta</h4>
+                        <p>Te enviamos la respuesta en máximo 30 días.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+        <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section company-info">
+                    <img src="./img/Icon_Aoxlab/LOGO BLANCO (1).png" alt="AOXLAB Logo" class="footer-logo">
+                    <p>Más que un laboratorio: un aliado en tu camino hacia la calidad.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/aoxlab_sas/?hl=es-la"target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://co.linkedin.com/company/aoxlab"target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sección de Contacto Principal - Medellín -->
+                <div class="footer-section contact-main"><!--Números de contacto actualizados hasta 2025/06/12-->
+                    <h4>Sede Principal - Medellín</h4>
+                    <div class="contact-info-main">
+                        <p><i class="fas fa-map-marker-alt"></i> Calle 32F #74B-122, Laureles<br>Medellín, Antioquia</p>
+                        <p><i class="fas fa-phone"></i> (604) 604-7454</p>
+                        <p><i class="fas fa-mobile-alt"></i> +57 310 874 3291</p>
+                        <p><i class="fas fa-mobile-alt"></i> +57 310 833 8768</p>
+                        <p><i class="fas fa-envelope"></i> direccioncomercial@aoxlab.com</p>
+                    </div>
+                </div>
+
+                <!-- Sección de Otras Ciudades -->
+                <div class="footer-section contact-cities">
+                    <h4>Otras Ciudades</h4>
+                    <div class="cities-grid">
+                        <div class="city-contact">
+                            <div class="city-header">
+                                <i class="fas fa-map-pin"></i>
+                                <span class="city-name">Bogotá</span>
+                            </div>
+                            <p class="city-phone">
+                                <i class="fas fa-mobile-alt"></i> +57 310 383 0543
+                            </p>
+                        </div>
+
+                        <div class="city-contact">
+                            <div class="city-header">
+                                <i class="fas fa-map-pin"></i>
+                                <span class="city-name">Cali</span>
+                            </div>
+                            <p class="city-phone">
+                                <i class="fas fa-mobile-alt"></i> +57 310 206 5380
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="Somos.html">Somos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="Certifcaciones.html">Certificaciones</a></li>
+                        <li><a href="cliente.html">Portal Clientes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li><a href="Contacto.html">PQRS</a></li>
+                        <li><a href="https://www.google.com/maps/d/u/0/edit?mid=1qGKuC6dyM3Hl5wamHOxGQbNzX_Ls47w&usp=sharing" target="_blank">Mapa del sitio</a></li>
+                        <li><a href="politicas.html">Tratamiento de datos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aoxlab S.A.S. Todos los derechos reservados. | Ágil, Eficiente y Flexible.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Botones Flotantes -->
+
+    <!-- WhatsApp Flotante -->
+        <a href="#" class="whatsapp-float" 
+        id="whatsapp-float-btn"
+        aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">¿Necesitas ayuda?</span>
+        </a>
+
+    <!-- Botón Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Botón flotante del chatbot 
+<div class="chatbot-float" id="chatbot-toggle">
+    <i class="fas fa-comments"></i>
+    <span class="tooltip">¿Necesitas ayuda?</span>
+    <div class="notification-dot" id="chatbot-notification"></div>
+</div>-->
+
+<!-- Modal del chatbot -->
+<div class="chatbot-modal" id="chatbot-modal">
+    <div class="chatbot-header">
+        <div class="chatbot-avatar">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chatbot-info">
+            <h3>Asistente Aoxlab</h3>
+            <span class="status online">En línea</span>
+        </div>
+        <button class="chatbot-close" id="chatbot-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <div class="chatbot-body" id="chatbot-body">
+        <div class="chat-message bot-message">
+            <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="message-content">
+                <p>¡Hola! Soy el asistente virtual de Aoxlab. Estoy aquí para ayudarte con información sobre nuestros servicios de análisis y certificaciones. ¿En qué puedo asistirte hoy?</p>
+                <div class="quick-actions">
+                    <button class="quick-btn" data-action="servicios">Ver servicios</button>
+                    <button class="quick-btn" data-action="cotizacion">Solicitar cotización</button>
+                    <button class="quick-btn" data-action="resultados">Consultar resultados</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chatbot-footer">    
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Escribe tu mensaje aquí..." maxlength="500">
+            <button id="send-message" disabled>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        <div class="typing-indicator" id="typing-indicator" style="display: none;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+    <!-- Modal de WhatsApp -->
+    <div class="whatsapp-modal" id="whatsapp-modal">
+        <div class="whatsapp-modal-content">
+            <div class="whatsapp-header">
+                <div class="whatsapp-logo">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>Contáctanos por WhatsApp</h3>
+                <p>Selecciona tu ciudad más cercana</p>
+                <button class="whatsapp-close" id="whatsapp-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="whatsapp-contacts">
+                <!-- Medellín - Sede Principal -->
+                <a href="https://wa.me/573108338768?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Medellín" 
+                class="whatsapp-contact" 
+                target="_blank"
+                data-city="medellin">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Medellín</h4>
+                        <span class="contact-label">Sede Principal</span>
+                        <span class="contact-number">+57 310 833 8768</span>
+                    </div>
+                    <div class="contact-arrow">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </a>
+
+                <!-- Bogotá -->
+                <a href="https://wa.me/573103830543?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Bogotá" 
+                class="whatsapp-contact" 
+                target="_blank"
+                data-city="bogota">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Bogotá</h4>
+                        <span class="contact-label">Punto de Atención</span>
+                        <span class="contact-number">+57 310 383 0543</span>
+                    </div>
+                    <div class="contact-arrow">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </a>
+
+                <!-- Cali -->
+                <a href="https://wa.me/573102065380?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Cali" 
+                class="whatsapp-contact" 
+                target="_blank"
+                data-city="cali">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Cali</h4>
+                        <span class="contact-label">Punto de Atención</span>
+                        <span class="contact-number">+57 310 206 5380</span>
+                    </div>
+                    <div class="contact-arrow">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="whatsapp-footer">
+                <p>Horario de atención: Lun - Vie 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </div>
+    <script src="Js/Inicio.js"></script>
+    <script src="Js/Contacto.js"></script>
+</body>
+</html>

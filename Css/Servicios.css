@@ -1,0 +1,2430 @@
+/* ===== ESTILOS ESPECÍFICOS PARA PÁGINA SERVICIOS ===== */
+/* 
+ * DOCUMENTACIÓN DEL ARCHIVO CSS - SERVICIOS
+ * 
+ * Este archivo contiene todos los estilos específicos para la página de servicios de AOXLAB.
+ * Incluye tanto los estilos originales como las nuevas implementaciones de tarjetas v2.
+ * 
+ * VERSIÓN: 2.0 - Implementación de expansión solo para microbiológicos
+ * 
+ * SECCIONES PRINCIPALES:
+ * 1. Hero Section - Sección principal de bienvenida
+ * 2. Filtros y Búsqueda - Sistema de filtrado de servicios
+ * 3. Grid de Servicios Originales - Tarjetas de servicio versión 1
+ * 4. Grid de Servicios V2 - Nuevas tarjetas con información ampliada
+ * 5. Sistema de Expansión - SOLO para microbiológicos
+ * 6. Metodología - Pasos del proceso de análisis
+ * 7. Tecnología - Equipamiento y capacidades técnicas
+ * 8. CTA Final - Llamadas a la acción
+ * 9. Responsive Design - Adaptaciones para dispositivos móviles
+ * 
+ * IMPORTANTE: La expansión SOLO está activa para servicios microbiológicos
+ */
+
+/* ===== 1. HERO SECTION - SECCIÓN PRINCIPAL ===== */
+
+/* ===== HERO SECTION CON IMAGEN HTML ===== */
+.servicios-hero {
+    padding: calc(80px + var(--spacing-xxl)) 0 var(--spacing-xxl);
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Imagen de fondo usando etiqueta img */
+.hero-background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Equivalente a background-size: cover */
+    object-position: center center; /* Equivalente a background-position: center */
+    z-index: 1;
+}
+
+/* Overlay para el degradado */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* Contenido del hero */
+.servicios-hero .container {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+
+
+.servicios-hero {
+    background-size: cover;
+    background-position: center top; /* O ajusta según tu imagen */
+    /* También puedes usar porcentajes específicos como: */
+    /* background-position: 30% 20%; */
+}
+
+.servicios-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 0%, rgba(43, 161, 212, 0.05) 100%);
+    z-index: 1;
+}
+
+.servicios-hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center; 
+    position: relative;
+    z-index: 2;
+}
+
+.servicios-hero .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.2;
+}
+
+.servicios-hero .highlight {
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.servicios-hero .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    opacity: 0.7;
+}
+
+.servicios-hero .hero-subtitle {
+    font-size: 1.5rem;
+    color: black; 
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.servicios-hero .hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.servicios-hero .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-color);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-bold);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: var(--spacing-md);
+    font-size: medium;
+}
+
+/* ===== ICONOS FLOTANTES DEL HERO ===== */
+/* ===== HEXÁGONOS FLOTANTES DEL HERO - 7 SECTORES ===== */
+.hero-visual {
+    position: relative;
+    height: 500px; /* Incrementamos altura para 7 hexágonos */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-icons {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre hexágonos */
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.hexagon-item {
+    position: relative;
+    background: var(--white);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    
+    /* Hexágonos más grandes */
+    width: 160px;
+    height: 160px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    
+    /* Centrar contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Efectos base */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+/* Posicionamiento y colores específicos para cada hexágono - 7 sectores */
+/* ===== HEXÁGONOS CON ANIMACIÓN ALEATORIA ===== */
+
+/* Hexágono de Cosméticos (ahora en posición 1) */
+.hexagon-item:nth-child(1) {
+    /* MANTENER POSICIONAMIENTO EXACTO */
+    top: 52%; right: -23%;
+    grid-column: 2; grid-row: 1;
+    
+    /* NUEVO gradiente para Cosméticos */
+    background: linear-gradient(135deg, #F37628, #E06B2E);
+    color: var(--white);
+    
+    /* Animaciones combinadas con timing aleatorio */
+    animation: 
+        float 6s ease-in-out infinite 0s,
+        random-glow 4s ease-in-out infinite 2s,
+        color-pulse 8s ease-in-out infinite 1s,
+        border-shine 3s ease-in-out infinite 0.5s;
+    
+    /* NUEVA sombra personalizada para Cosméticos */
+    box-shadow: 0 0 15px rgba(224, 107, 46, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hexágono de Calidad del Aire (ahora en posición 2) */
+.hexagon-item:nth-child(2) {
+    /* MANTENER POSICIONAMIENTO EXACTO */
+    top: 90%; right: 90%;
+    grid-column: 3; grid-row: 2;
+    
+    /* NUEVO gradiente para Calidad del Aire */
+    background: linear-gradient(135deg, #2BA1D4, #1E8BC3);
+    color: var(--white);
+    
+    /* Animaciones con timing diferente */
+    animation: 
+        float 6s ease-in-out infinite 1s,
+        random-glow 5s ease-in-out infinite 3.5s,
+        color-pulse 9s ease-in-out infinite 2.2s,
+        border-shine 3.5s ease-in-out infinite 1.8s;
+    
+    /* NUEVA sombra para Calidad del Aire */
+    box-shadow: 0 0 15px rgba(43, 161, 212, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hexágono de Cannabis medicinal (sin cambio de color - posición 3) */
+.hexagon-item:nth-child(3) {
+    /* MANTENER POSICIONAMIENTO EXACTO */
+    top: 15%; right: -85%;
+    grid-column: 1; grid-row: 2;
+    
+    /* Gradiente mantiene el mismo (Cannabis) */
+    background: linear-gradient(135deg, #F39C5A, #F37628);
+    color: var(--white);
+    
+    /* Animaciones con timing único */
+    animation: 
+        float 6s ease-in-out infinite 2s,
+        random-glow 4.5s ease-in-out infinite 5s,
+        color-pulse 10s ease-in-out infinite 3.4s,
+        border-shine 4s ease-in-out infinite 2.7s;
+    
+    box-shadow: 0 0 15px rgba(243, 118, 40, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hexágono de Alimentación Humana (ahora en posición 4) */
+.hexagon-item:nth-child(4) {
+    /* MANTENER POSICIONAMIENTO EXACTO */
+    top: 52%; right: -35%;
+    
+    /* NUEVO gradiente para Alimentación Humana */
+    background: linear-gradient(135deg, #66C0E7, #4FB3D9);
+    color: var(--white);
+    
+    /* Animaciones escalonadas */
+    animation: 
+        float 6s ease-in-out infinite 3s,
+        random-glow 3.8s ease-in-out infinite 6.5s,
+        color-pulse 11s ease-in-out infinite 4.6s,
+        border-shine 3.2s ease-in-out infinite 3.9s;
+    
+    /* NUEVA sombra para Alimentación Humana */
+    box-shadow: 0 0 15px rgba(102, 192, 231, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hexágono de Farmacéutica (sin cambio de color - posición 5) */
+.hexagon-item:nth-child(5) {
+    /* MANTENER POSICIONAMIENTO EXACTO */
+    bottom: -128%; left: -40%;
+    
+    /* Gradiente mantiene el mismo (Farmacéutica) */
+    background: linear-gradient(135deg, #66C0E7, #4FB3D9);
+    color: var(--white);
+    
+    /* Animaciones con patrón diferente */
+    animation: 
+        float 6s ease-in-out infinite 4s,
+        random-glow 5.2s ease-in-out infinite 8s,
+        color-pulse 12s ease-in-out infinite 5.8s,
+        border-shine 3.8s ease-in-out infinite 5.1s;
+    
+    box-shadow: 0 0 15px rgba(102, 192, 231, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hexágono de Alimentación Animal (ahora en posición 6) */
+.hexagon-item:nth-child(6) {
+    /* MANTENER POSICIONAMIENTO EXACTO */
+    top: 15%; right: 128%;
+    
+    /* NUEVO gradiente para Alimentación Animal */
+    background: linear-gradient(135deg, #4FB3D9, #2BA1D4);
+    color: var(--white);
+    
+    /* Animaciones con timing extendido */
+    animation: 
+        float 6s ease-in-out infinite 5s,
+        random-glow 4.3s ease-in-out infinite 9.5s,
+        color-pulse 13s ease-in-out infinite 7s,
+        border-shine 4.5s ease-in-out infinite 6.3s;
+    
+    /* NUEVA sombra para Alimentación Animal */
+    box-shadow: 0 0 15px rgba(79, 179, 217, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hexágono de Ambiental (sin cambio de color - posición 7) */
+.hexagon-item:nth-child(7) {
+    /* MANTENER POSICIONAMIENTO EXACTO */
+    bottom: 22%; right: -34%;
+    
+    /* Gradiente mantiene el mismo (Ambiental) */
+    background: linear-gradient(135deg, #228B22, #32CD32);
+    color: var(--white);
+    
+    /* Animaciones finales del ciclo */
+    animation: 
+        float 6s ease-in-out infinite 6s,
+        random-glow 4.8s ease-in-out infinite 11s,
+        color-pulse 14s ease-in-out infinite 8.2s,
+        border-shine 4.2s ease-in-out infinite 7.5s;
+    
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== ESTILOS PARA MENÚ COMPACTO DE DOS COLUMNAS ===== */
+
+/* Elemento destacado para uniformidad visual */
+.dropdown-item.highlighted-item {
+    background: rgba(43, 161, 212, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item.highlighted-item:hover {
+    background: rgba(43, 161, 212, 0.1);
+}
+
+/* Contenedor principal del dropdown con espaciado reducido */
+.dropdown-container {
+    padding: 8px 0; /* Reducido de padding original */
+    gap: 4px; /* Espaciado mínimo entre elementos */
+}
+
+/* Elementos del dropdown principal con espaciado compacto */
+.dropdown-item {
+    margin-bottom: 4px; /* Reducido significativamente */
+    padding: 6px 12px; /* Padding compacto */
+}
+
+/* Enlaces del dropdown con altura reducida */
+.dropdown-link {
+    padding: 8px 12px; /* Reducido para mayor compacidad */
+    min-height: auto;
+    line-height: 1.2;
+}
+
+/* Títulos compactos */
+.dropdown-title {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* ===== SUBMENU COMPACTO DE DOS COLUMNAS ===== */
+.compact-submenu {
+    width: 380px; /* Ancho optimizado para dos columnas */
+    max-height: 400px; /* Altura controlada para evitar scroll */
+    overflow: visible;
+    padding: 12px;
+}
+
+/* Header del submenu compacto */
+.compact-submenu .submenu-header {
+    margin-bottom: 6px; /* Reducido */
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(43, 161, 212, 0.2);
+}
+
+.compact-submenu .submenu-header h4 {
+    font-size: 16px;
+    margin-bottom: 2px; /* Muy reducido */
+    line-height: 1.2;
+}
+
+.compact-submenu .submenu-header p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Grid de dos columnas optimizado */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+/* Columnas individuales */
+.submenu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 3px; /* Espaciado mínimo entre elementos */
+}
+
+/* Items del submenu compactos */
+.submenu-item.compact {
+    padding: 6px 8px; /* Padding muy reducido */
+    margin-bottom: 2px; /* Espaciado mínimo */
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submenu-item.compact:hover {
+    background: rgba(43, 161, 212, 0.08);
+    transform: translateX(2px);
+}
+
+/* Iconos compactos */
+.submenu-item.compact i {
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Contenido de texto compacto */
+.submenu-item.compact .submenu-content {
+    flex: 1;
+}
+
+.submenu-item.compact h5 {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* ===== OPTIMIZACIÓN DE ALTURA PARA EVITAR SCROLL ===== */
+.services-dropdown {
+    max-height: 500px; /* Altura controlada */
+    overflow: visible;
+}
+
+/* Reducir espaciado en todos los elementos del dropdown */
+.dropdown-menu {
+    padding: 6px 0; /* Padding reducido */
+}
+
+.dropdown-item + .dropdown-item {
+    margin-top: 2px; /* Espaciado mínimo entre elementos principales */
+} 
+
+/* Efectos hover suaves que no interfieren con las animaciones */
+.hexagon-item:hover {
+    /* Efecto sutil que se suma a las animaciones existentes */
+    filter: brightness(1.1) contrast(1.1) !important;
+    transform: translateY(-5px) scale(1.03) !important;
+    
+    /* Mantener z-index alto en hover */
+    z-index: 10;
+    
+    /* Transición más rápida en hover */
+    transition: all 0.2s ease !important;
+}
+/* ===== METODOLOGÍA HORIZONTAL CON CARRUSEL ===== */
+.metodologia-horizontal-section {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.metodologia-horizontal-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 120%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.metodologia-horizontal-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Navegación de pasos */
+.steps-navigation {
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.steps-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: var(--spacing-md);
+}
+
+.step-nav-btn {
+    background: var(--white);
+    border: 2px solid var(--shadow-light);
+    border-radius: 12px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    min-width: 120px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(43, 161, 212, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.step-nav-btn.active {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--white);
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(43, 161, 212, 0.3);
+}
+
+.step-nav-number {
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.step-nav-label {
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+}
+
+/* Línea de progreso */
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background: var(--shadow-light);
+    border-radius: 2px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.6s ease;
+}
+
+/* Carrusel de contenido */
+.metodologia-carousel {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    background: var(--white);
+}
+
+.carousel-container {
+    height: 100%;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.step-slide {
+    min-width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    position: relative;
+}
+
+.step-slide.active {
+    opacity: 1;
+}
+
+.step-slide-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: var(--spacing-xxl);
+    gap: var(--spacing-xl);
+}
+
+.step-icon-large {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--white);
+    box-shadow: 0 15px 40px rgba(43, 161, 212, 0.3);
+    flex-shrink: 0;
+}
+
+.step-details {
+    flex: 1;
+    max-width: 600px;
+}
+
+.step-details h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-bold);
+}
+
+.step-details p {
+    font-size: 1.2rem;
+    color: var(--medium-gray);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.step-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: var(--light-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(43, 161, 212, 0.1);
+    transform: translateX(5px);
+}
+
+.feature-item i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.feature-item span {
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-color);
+}
+
+.step-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--white);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(43, 161, 212, 0.3);
+}
+
+.step-action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(43, 161, 212, 0.4);
+}
+
+.step-action-btn.secondary {
+    background: var(--white);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.step-multiple-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+/* Controles del carrusel */
+.carousel-controls {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.carousel-btn:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+
+
+/* Efectos en iconos durante hover */
+.hexagon-item:hover i {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+}
+
+/* Efectos en texto durante hover */
+.hexagon-item:hover span {
+    transform: scale(1.05);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Estilos para iconos y texto dentro de hexágonos */
+.hexagon-item i {
+    font-size: 2.2rem;
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+    display: block;
+    font-weight: var(--font-weight-bold);
+}
+
+.hexagon-item span {
+    font-size: 0.85rem;
+    color: var(--white);
+    font-weight: var(--font-weight-bold);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Efectos hover mejorados para hexágonos */
+/* Efectos hover mejorados */
+.hexagon-item:hover {
+    /* Elevación y escalado */
+    transform: translateY(-15px) scale(1.1);
+    
+    /* Sombra más intensa */
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 30px rgba(102, 192, 231, 0.3);
+    
+    /* Brillo aumentado */
+    filter: brightness(1.2) saturate(1.2);
+    
+    /* Borde más brillante */
+    border-color: rgba(255, 255, 255, 0.7);
+    
+    /* Asegurar que aparezca por encima */
+    z-index: 10;
+}
+
+/* Rotación de iconos en hover */
+.hexagon-item:hover i {
+    transform: scale(1.2) rotateY(360deg);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+}
+
+/* Efecto de texto en hover */
+.hexagon-item:hover span {
+    transform: scale(1.1);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+
+/* ===== KEYFRAMES PARA ILUMINACIÓN ALEATORIA ===== */
+
+/* Efecto de pulso aleatorio con iluminación */
+@keyframes random-glow {
+    0% {
+        box-shadow: 
+            0 0 5px rgba(255, 255, 255, 0.3),
+            0 0 10px rgba(255, 255, 255, 0.2);
+        filter: brightness(1);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 20px rgba(255, 255, 255, 0.8),
+            0 0 30px rgba(255, 255, 255, 0.5),
+            0 0 40px rgba(255, 255, 255, 0.3);
+        filter: brightness(1.3) saturate(1.2);
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 
+            0 0 5px rgba(255, 255, 255, 0.3),
+            0 0 10px rgba(255, 255, 255, 0.2);
+        filter: brightness(1);
+        transform: scale(1);
+    }
+}
+
+/* Variación de brillo con cambio de color */
+@keyframes color-pulse {
+    0% {
+        filter: hue-rotate(0deg) brightness(1) saturate(1);
+    }
+    25% {
+        filter: hue-rotate(5deg) brightness(1.2) saturate(1.3);
+    }
+    50% {
+        filter: hue-rotate(10deg) brightness(1.4) saturate(1.5);
+    }
+    75% {
+        filter: hue-rotate(5deg) brightness(1.2) saturate(1.3);
+    }
+    100% {
+        filter: hue-rotate(0deg) brightness(1) saturate(1);
+    }
+}
+
+/* Efecto de resplandor en el borde */
+@keyframes border-shine {
+    0% {
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* ===== 2. FILTROS Y BÚSQUEDA ===== */
+.servicios-filters {
+    padding: var(--spacing-xl) 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--shadow-light);
+}
+
+.filters-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.filters-header h2 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+.filters-header p {
+    color: var(--medium-gray);
+    font-size: 1.6rem;
+}
+
+.filters-controls {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 50px;
+    border: 2px solid var(--shadow-light);
+    border-radius: var(--border-radius-lg);
+    font-size: 1rem;
+    transition: all var(--transition-medium);
+    background: var(--white);
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(43, 161, 212, 0.1);
+}
+
+.search-box i {
+    position: absolute;
+    left: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--medium-gray);
+    font-size: 1.1rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--shadow-light);
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    font-weight: var(--font-weight-bold);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--secondary-color);
+    color: var(--white);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.filter-btn i {
+    font-size: 1.1rem;
+}
+
+/* ===== 3. GRID DE SERVICIOS ORIGINALES (V1) ===== */
+.servicios-grid {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+}
+
+/* Contenedor principal del grid - permitir expansión */
+.services-container {
+    display: grid;
+    /* CAMBIO PRINCIPAL: Forzar exactamente 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg); /* Reducir gap para mejor aprovechamiento */
+    
+    /* Mantener comportamiento de expansión */
+    grid-auto-flow: row dense;
+    
+    /* Padding del contenedor */
+    padding: 0 var(--spacing-md);
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 8px 30px var(--shadow-light);
+    transition: all var(--transition-medium);
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px var(--shadow-medium);
+    border-color: var(--secondary-color);
+}
+
+.service-card.featured {
+    border-color: var(--accent-color);
+    position: relative;
+}
+
+.service-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: var(--accent-color);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-bold);
+    z-index: 2;
+}
+
+.service-icon {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--white);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-lg) auto var(--spacing-md);
+    font-size: 2rem;
+    transition: all var(--transition-medium);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotateY(360deg);
+}
+
+.service-content {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+.service-content h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+}
+
+.service-content p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xs) 0;
+    color: var(--primary-color);
+}
+
+.service-features i {
+    color: var(--success-color);
+    font-size: 0.9rem;
+    width: 16px;
+}
+
+.service-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--shadow-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.service-time {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+.service-price {
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-bold);
+    font-size: 1.1rem;
+}
+
+.service-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+.btn-detail,
+.btn-quote {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-medium);
+}
+
+.btn-detail {
+    background: var(--light-gray);
+    color: var(--primary-color);
+    border: 2px solid var(--shadow-light);
+}
+
+.btn-quote {
+    background: var(--secondary-color);
+    color: var(--white);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-quote.primary {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-detail:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.btn-quote:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Tarjeta en estado normal */
+/* ===== AJUSTE DE TARJETAS PARA 3 COLUMNAS ===== */
+/* Tarjeta principal - altura automática y flexible */
+.service-card-v2 {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    border: 1px solid rgba(43, 161, 212, 0.1);
+    
+    /* NUEVA CONFIGURACIÓN - Altura flexible */
+    min-height: auto; /* Cambiado de 450px a auto */
+    height: 100%; /* Ocupa toda la altura del grid */
+    max-width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    
+    /* Grid positioning normal */
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+
+.service-card-v2:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(43, 161, 212, 0.15);
+    border-color: var(--secondary-color);
+}
+
+/* ===== OPTIMIZACIÓN DE CONTENIDO PARA 3 COLUMNAS ===== */
+
+/* Header más compacto */
+/* Header de la tarjeta - altura optimizada */
+.service-card-header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    padding: var(--spacing-md);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    
+    /* NUEVA CONFIGURACIÓN - Altura flexible */
+    min-height: 140px; /* Reducido de 160px */
+    max-height: none; /* Removido el max-height restrictivo */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0; /* No se comprime */
+}
+
+
+/* Contenido básico con altura controlada */
+.service-basic-content {
+    /* NUEVA CONFIGURACIÓN - Altura automática */
+    min-height: auto; /* Cambiado de 200px */
+    max-height: none; /* Removido el max-height restrictivo */
+    overflow: visible; /* Cambiado de hidden */
+    position: relative;
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.service-card-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.6s ease;
+}
+
+.service-card-v2:hover .service-card-header::before {
+    transform: scale(3);
+}
+
+.service-icon-v2 {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+    backdrop-filter: blur(10px);
+}
+
+.service-title-v2 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+/* Contenedor de contenido con distribución uniforme */
+.service-content-v2 {
+    padding: var(--spacing-md);
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* NUEVA CONFIGURACIÓN - Sin restricciones de altura */
+    min-height: auto; /* Cambiado de 240px */
+    max-height: none; /* Removido el max-height restrictivo */
+}
+/* Descripción con texto truncado */
+.service-description-v2 {
+    color: var(--medium-gray);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+    
+    /* NUEVA JUSTIFICACIÓN */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: break-word;
+    
+    /* Sistema de truncado ajustado */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    max-height: 168px; /* Altura ajustada para 7 líneas */
+    min-height: 168px;
+
+    word-spacing: 0.015em; /*Espacio entre lienas */
+    letter-spacing: 0.015em;
+}
+
+/* Contenido expandido también justificado */
+.service-expanded-content p,
+.expanded-section p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    line-height: 1.6;
+}
+
+/* Listas dentro del contenido expandido */
+.service-features-v2 li,
+.techniques-list li {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5;
+}
+/* Estado expandido de la descripción */
+.service-description-v2.expanded {
+    display: block;
+    -webkit-line-clamp: none;
+    max-height: none;
+    min-height: auto;
+    overflow: visible;
+}
+
+/* ESTADO EXPANDIDO - Eliminar completamente el truncado */
+.service-card-v2.expanded .service-description-v2,
+.service-description-v2.expanded {
+    /* Desactivar completamente line-clamp */
+    display: block !important;
+    -webkit-line-clamp: none !important;
+    -webkit-box-orient: initial !important;
+    
+    /* Remover restricciones de altura y overflow */
+    max-height: none !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    text-overflow: initial !important;
+    
+    /* Permitir que el texto fluya naturalmente */
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.service-features-v2 {
+    list-style: none;
+    margin: 0 0 var(--spacing-md);
+    padding: 0;
+    flex: 1;
+}
+
+.service-features-v2 li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xs) 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.service-features-v2 .feature-icon {
+    color: var(--success-color);
+    font-size: 1.3rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.service-specs {
+    background: var(--light-gray);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.service-specs h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0 0 var(--spacing-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.spec-item {
+    text-align: center;
+    padding: var(--spacing-sm);
+    background: var(--white);
+    border-radius: 6px;
+    border: 1px solid rgba(43, 161, 212, 0.1);
+}
+
+.spec-value {
+    font-weight: var(--font-weight-bold);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.spec-label {
+    font-size: 1.2rem;
+    color: var(--medium-gray);
+    margin-top: 2px;
+}
+
+
+/* Sección de acciones compacta */
+.service-action-v2 {
+    padding: var(--spacing-md);
+    margin-top: auto; /* Se posiciona al final */
+    
+    /* NUEVA CONFIGURACIÓN - Altura automática */
+    min-height: auto; /* Cambiado de 110px */
+    max-height: none; /* Removido el max-height restrictivo */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    flex-shrink: 0; /* No se comprime */
+}
+
+
+.btn-contact-v2 {
+    width: 100%;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    font-weight: var(--font-weight-bold);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-contact-v2:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 161, 212, 0.3);
+}
+
+/* ===== 5. SISTEMA DE EXPANSIÓN - SOLO MICROBIOLÓGICOS ===== */
+/* 
+ * IMPORTANTE: Estos estilos solo se aplicarán a la tarjeta de microbiológicos
+ * que tiene el botón de expansión. Las demás tarjetas v2 no tendrán esta funcionalidad.
+ */
+
+/* Contenido expandido inicialmente oculto */
+.service-expanded-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Estado expandido */
+.service-expanded-content.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.3s ease 0.2s,
+                transform 0.3s ease 0.2s;
+}
+
+/* Secciones individuales dentro del contenido expandido */
+.expanded-section {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md);
+    background: var(--light-gray);
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.expanded-section h4 {
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.expanded-section h4 i {
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+.expanded-section p {
+    color: var(--medium-gray);
+    line-height: 2;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Grid de matrices analizables */
+.matrices-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.matrix-tag {
+    background: var(--white);
+    color: var(--primary-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    border: 1px solid var(--secondary-color);
+    transition: all var(--transition-medium);
+}
+
+.matrix-tag:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Lista de técnicas analíticas */
+.techniques-list {
+    list-style: none;
+    padding: 0;
+    
+}
+  
+.techniques-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xs) 0;
+    color: var(--primary-color);
+    font-size: 1rem; 
+}
+
+.techniques-list li::before {
+    content: "-";
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+/* Grid de normativas */
+.normatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.normative-item {
+    background: var(--white);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(43, 161, 212, 0.2);
+}
+
+.normative-item strong {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.normative-item span {
+    color: var(--medium-gray);
+    font-size: 1.4rem;
+}
+
+/* Proposiciones de valor */
+.value-propositions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(43, 161, 212, 0.1);
+}
+
+.value-item i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    min-width: 30px;
+}
+
+.value-item strong {
+    color: var(--primary-color);
+    font-size: 1.3rem;  
+    display: block;
+    margin-bottom: var(--spacing-xs);
+
+}
+
+.value-item span {
+    color: var(--medium-gray);
+    font-size: 1.6rem;
+}
+
+/* Botón de expansión - SOLO para microbiológicos */
+.btn-expand-details {
+    width: 100%;
+    background: var(--light-gray);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+    font-weight: var(--font-weight-bold);
+    font-size: 1.3rem; 
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-expand-details:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-expand-details.expanded {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-expand-details.expanded i {
+    transform: rotate(180deg);
+}
+
+.btn-expand-details i {
+    transition: transform var(--transition-medium);
+}
+
+/* Ajustes especiales para tarjeta expandida */
+/* Ajustes para tarjetas expandidas */
+/* Tarjeta expandida - ocupar múltiples columnas y filas */
+.service-card-v2.expanded {
+    /* Expansión horizontal: ocupar 2-3 columnas según disponibilidad */
+    grid-column: 1 / -1; /* Ocupar todas las columnas disponibles */
+    
+    /* Expansión vertical automática según contenido */
+    grid-row: span auto;
+    
+    /* Altura automática para acomodar todo el contenido */
+    min-height: auto;
+    max-height: none;
+    
+    /* Efectos visuales mejorados */
+    box-shadow: 0 20px 60px rgba(43, 161, 212, 0.2);
+    border-color: var(--secondary-color);
+    z-index: 10;
+    
+    /* Transición suave */
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.service-card-v2.expanded .service-content-v2 {
+    max-height: none;
+    min-height: auto;
+}
+
+.service-card-v2.expanded .service-basic-content {
+    max-height: none !important;
+    min-height: auto !important;
+    overflow: visible !important;
+}
+
+/* Indicador visual de texto truncado */
+.service-basic-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(transparent, var(--white));
+    pointer-events: none;
+}
+.service-card-v2.expanded .service-description-v2 {
+    max-height: none;
+    min-height: auto;
+}
+.service-card-v2.expanded .service-basic-content::after {
+    display: none;
+}
+.service-card-v2.expanded:hover {
+    transform: translateY(0) scale(1);
+}
+
+/* ===== 6. MENSAJE SIN RESULTADOS ===== */
+.no-results {
+    text-align: center;
+    padding: var(--spacing-xxl);
+    color: var(--medium-gray);
+}
+
+.no-results i {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.5;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+/* ===== 7. SECCIÓN METODOLOGÍA ===== */
+.metodologia-section {
+    padding: var(--spacing-xxl) 0;
+    background: var(--white);
+}
+
+.metodologia-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.step-item {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    box-shadow: 0 8px 30px var(--shadow-light);
+    transition: all var(--transition-medium);
+    position: relative;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px var(--shadow-medium);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    margin: 0 auto var(--spacing-md);
+}
+.category-anchors {
+    position: relative;
+}
+
+.anchor-point {
+    position: absolute;
+    top: -100px; /* Ajuste según altura del header */
+    visibility: hidden;
+}
+
+.dropdown-item.active {
+    background: var(--color-primary);
+    color: white !important;
+}
+
+.service-card-v2:target {
+    animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+    0% { background: transparent; }
+    50% { background: rgba(43, 161, 212, 0.1); }
+    100% { background: transparent; }
+}
+
+
+.step-content h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+.step-content p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.step-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-medium);
+}
+
+.step-link:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* ===== 8. SECCIÓN TECNOLOGÍA ===== */
+.tecnologia-section {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-gray));
+    color: var(--white);
+}
+
+.tecnologia-section .section-header h2 {
+    color: var(--white);
+}
+
+.tecnologia-section .section-header p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tecnologia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+/* ===== ESTILOS ADICIONALES PARA CONTENIDO EXPANDIDO COMPLETO ===== */
+
+.parameters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.parameter-category {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(43, 161, 212, 0.1);
+}
+
+.parameter-category h5 {
+    color: var(--secondary-color);
+    font-size: 1.2rem;         /* Aumentado de 0.85rem */
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.parameter-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.parameter-category li {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--shadow-light);
+}
+
+.parameter-category li:last-child {
+    border-bottom: none;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    transition: all var(--transition-medium);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tech-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.tech-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-bold);
+}
+
+.tech-card p {
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ===== 9. CTA SERVICIOS FINAL ===== */
+.cta-servicios {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+    text-align: center;
+}
+
+.cta-servicios .cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-bold);
+}
+
+.cta-servicios .cta-content p {
+    font-size: 1.1rem;
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-servicios .cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* ===== Sección Metodología ===== */
+.metodologia-section {
+    padding: var(--spacing-xxl) 0;
+    background: var(--white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+.section-header p {
+    color: var(--medium-gray);
+    font-size: 1.6rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.metodologia-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.step-item {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    box-shadow: 0 8px 30px var(--shadow-light);
+    transition: all var(--transition-medium);
+    position: relative;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px var(--shadow-medium);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    margin: 0 auto var(--spacing-md);
+}
+
+.step-content h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+.step-content p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.4rem;
+}
+
+.step-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-medium);
+    font-size: 1.4rem;
+}
+
+.step-link:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.step-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+
+
+/* Estilo para la conclusión tecnológica */
+.tech-conclusion {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-lg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tech-conclusion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.conclusion-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.tech-conclusion p {
+    color: var(--white);
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 800px;
+}
+
+
+
+/* ===== 10. ANIMACIONES DE FILTROS ===== */
+.service-card.filtered-out,
+.service-card-v2.filtered-out {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.service-card.filtered-in,
+.service-card-v2.filtered-in {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+/* ===== 11. MODAL DE COTIZACIÓN RÁPIDA ===== */
+.quick-quote-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--medium-gray);
+    cursor: pointer;
+}
+
+.modal-header h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.modal-body {
+    margin-bottom: var(--spacing-lg);
+}
+
+.modal-note {
+    background: var(--light-gray);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-md);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+}
+
+.modal-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.modal-actions .btn-primary,
+.modal-actions .btn-secondary {
+    flex: 1;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.modal-actions .btn-primary {
+    background: var(--secondary-color);
+    color: var(--white);
+    border: 2px solid var(--secondary-color);
+}
+
+.modal-actions .btn-secondary {
+    background: var(--light-gray);
+    color: var(--primary-color);
+    border: 2px solid var(--shadow-light);
+}
+
+.modal-actions .btn-primary:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.modal-actions .btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+:root {
+  /* Breakpoints */
+  --bp-xs: 576px;
+  --bp-sm: 768px; 
+  --bp-md: 992px;
+  --bp-lg: 1200px;
+  
+  /* Espaciados fluidos */
+  --spacing-xs: clamp(0.25rem, 1vw, 0.5rem);
+  --spacing-sm: clamp(0.5rem, 2vw, 1rem);
+  --spacing-md: clamp(1rem, 3vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 4vw, 2rem);
+  --spacing-xl: clamp(2rem, 5vw, 3rem);
+  
+  /* Tipografía fluida */
+  --fs-100: clamp(0.875rem, 2vw, 1rem);
+  --fs-200: clamp(1rem, 2.5vw, 1.25rem);
+  --fs-300: clamp(1.25rem, 3vw, 1.5rem);
+  --fs-400: clamp(1.5rem, 4vw, 2rem);
+  --fs-500: clamp(2rem, 5vw, 3rem);
+}
+
+@media (max-width: 768px) {
+  .servicios-hero .container {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .servicios-hero {
+    min-height: 60vh; /* Reducir altura en móvil */
+  }
+  
+  /* Ocultar hexágonos flotantes en móvil */
+  .floating-icons {
+    display: none;
+  }
+  
+  .servicios-hero .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .servicios-hero .hero-actions .cta-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+  padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .service-card-v2.expanded {
+    grid-column: 1; /* Solo ocupar una columna */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .filters-controls {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: stretch;
+  }
+  
+  .filter-buttons {
+    justify-content: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .filter-btn span {
+    display: none; /* Solo iconos en móvil muy pequeño */
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-nav-container {
+    flex-direction: column;
+  }
+  
+  .step-nav-btn {
+    width: 100%;
+    padding: var(--spacing-sm);
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .step-slide-content {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-md);
+  }
+  
+  .carousel-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card-v2 {
+    min-height: auto;
+  }
+  
+  .service-card-header {
+    padding: var(--spacing-sm);
+    min-height: 120px;
+  }
+  
+  .service-description-v2 {
+    font-size: var(--fs-200);
+    max-height: 120px;
+    min-height: 120px;
+  }
+  
+  .btn-expand-details,
+  .btn-contact-v2 {
+    padding: var(--spacing-sm);
+    font-size: var(--fs-200);
+    min-height: 44px; /* Touch-friendly */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hexagon-item,
+  .service-card-v2,
+  .step-slide {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card-v2:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+@media (max-width: 768px) {
+  .chatbot-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+/* ===== FIN DEL ARCHIVO CSS ===== */
+/* 
+ * RESUMEN DE CAMBIOS IMPLEMENTADOS PARA MICROBIOLÓGICOS:
+ * 
+ * 1. ✅ Sistema de expansión completo solo para la tarjeta microbiológica
+ * 2. ✅ Animaciones suaves para mostrar/ocultar contenido expandido
+ * 3. ✅ Botón de expansión con cambio de estado visual
+ * 4. ✅ Secciones expandidas con información técnica detallada
+ * 5. ✅ Grid responsive que se adapta cuando la tarjeta se expande
+ * 6. ✅ Compatibilidad total con el sistema de filtros existente
+ * 7. ✅ Estilos específicos para matrices, técnicas y normativas
+ * 8. ✅ Modal de cotización rápida mejorado
+ * 9. ✅ Responsive design completo para todos los dispositivos
+ * 10. ✅ Las demás tarjetas mantienen su diseño original sin cambios
+ */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .mobile-only.sub-item {
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+  }
+}
