@@ -1165,5 +1165,68 @@
             </div>
         </div>
     </div>
+
+<div id="promo-modal" class="promo-modal" aria-hidden="true" role="dialog" aria-label="Promoción AOXLAB">
+    <div class="promo-modal-content" role="document">
+        <button class="promo-close" aria-label="Cerrar promoción">&times;</button>
+        <img src="img/promo/promo_vida_util.png" alt="Promoción Vida Útil AOXLAB" />
+        <div class="promo-actions">
+        <a href="https://wa.me/573108338768?text=Hola,%20necesito%20información%20sobre%20los%20servicios%20de%20AOXLAB%20en%20Medellín" target="_blank" class="cta-btn primary">Solicitar Servicio</a>
+        
+        </div>
+    </div>
+</div>
+<script>
+
+(function(){
+  const modal = document.getElementById('promo-modal');
+  if(!modal) return;
+
+  const closeBtn = modal.querySelector('.promo-close');
+  const noShowBtn = document.getElementById('promo-no-show');
+  const storageKey = 'aoxlab_promo_hidden_until';
+  const now = Date.now();
+  const hiddenUntil = parseInt(localStorage.getItem(storageKey) || '0', 10);
+
+  // Si el usuario pidió no mostrar, y aún está dentro del periodo -> salir
+  if(hiddenUntil && hiddenUntil > now) return;
+
+  // Mostrar modal 1.2s después de load (para evitar choque con el hero)
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden'; // bloquear scroll de fondo
+    }, 1200);
+  });
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn?.addEventListener('click', closeModal);
+
+  // Cerrar al click fuera del contenido
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) closeModal();
+  });
+
+  // Escape para cerrar
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closeModal();
+  });
+
+  // "No mostrar por 7 días"
+  noShowBtn?.addEventListener('click', () => {
+    const days = 7;
+    localStorage.setItem(storageKey, String(Date.now() + days*24*60*60*1000));
+    closeModal();
+  });
+})();
+</script>
+
+
 </body>
 </html>

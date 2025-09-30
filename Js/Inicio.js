@@ -340,31 +340,12 @@ class AoxlabWebsite {
                 if (!this.autoplayPaused && !this.manuallyPaused) {
                     this.nextSlide();
                 }
-            }, 20000); // 20 segundos entre slides
+            }, 6000); // 8 segundos entre slides
             
             this.autoplayPaused = false;
         }
     }
 
-    /**
-     * Pausa la reproducción automática del carrusel
-     */
-    pauseAutoplay() {
-        this.autoplayPaused = true;
-        if (this.autoplayInterval) {
-            clearInterval(this.autoplayInterval);
-            this.autoplayInterval = null;
-        }
-    }
-    
-    /**
-     * Reanuda la reproducción automática del carrusel
-     */
-    resumeAutoplay() {
-        this.autoplayPaused = false;
-        this.startAutoplay();
-    }
-    
     /**
      * Reinicia completamente el autoplay del carrusel
      */
